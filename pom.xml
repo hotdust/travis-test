@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
 
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -18,4 +22,27 @@
         </dependency>
     </dependencies>
 
+
+    <build>
+
+    <plugins>
+        <plugin>
+            <inherited>true</inherited>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>default-compile</id>
+                    <phase>compile</phase>
+                    <goals>
+                        <goal>compile</goal>
+                    </goals>
+                    <configuration>
+                        <source>${java.version}</source>
+                        <target>${java.version}</target>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
 </project>
