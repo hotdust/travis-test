@@ -25,6 +25,17 @@ install:
   # Override default travis to use the maven wrapper
   - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
+deploy:
+  # Deploy releases to bintray
+  - provider: bintray
+    skip_cleanup: true        # required to prevent Travis from cleaning the workspace before deployment
+#    file: target/bintray.json # defines the Bintray project to deploy to, and what to deploy and where to.
+    user: hotdust # fill in your account name
+    key: $BINTRAY_API_KEY            # reference to your Bintray API key
+    on: # only deploy when
+      repo: hotdust/travis-test # only for this repo
+#      tags: true                           # and only when a (release) tag was set
+
 
 branches:
   except:
@@ -34,3 +45,4 @@ branches:
 #  - mvn jacoco:report coveralls:report
 after_success:
   - mvn clean test jacoco:report coveralls:report
+
