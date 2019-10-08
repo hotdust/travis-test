@@ -9,6 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
 
+    <scm>
+        <url>https://github.com/hotdust/travis-test</url>
+        <connection>scm:git:https://github.com/hotdust/travis-test.git</connection>
+        <developerConnection>scm:git:https://github.com/hotdust/travis-test.git</developerConnection>
+        <tag>0.0.1</tag>
+    </scm>
+
     <properties>
         <java.version>1.8</java.version>
         <coveralls-maven-plugin.version>4.3.0</coveralls-maven-plugin.version>
@@ -58,8 +65,79 @@
                     </execution>
                 </executions>
             </plugin>
+
+
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <configuration>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles> <!-- attaches javadocs and sources -->
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <tagNameFormat>@{project.version}</tagNameFormat>
+                </configuration>
+            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>io.zipkin.centralsync-maven-plugin</groupId>-->
+<!--                <artifactId>centralsync-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <subject>opentracing</subject>-->
+<!--                    <repo>maven</repo>-->
+<!--                    <packageName>XXX</packageName> &lt;!&ndash; XXX - maven package name in Bintray &ndash;&gt;-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
+
+
+    <distributionManagement>
+        <repository>
+            <id>bintray</id>
+            <url>https://api.bintray.com/maven/tamarjfrog/maven/travis-test/;publish=1</url> <!-- XXX - maven package name in Bintray -->
+        </repository>
+        <snapshotRepository>
+            <id>jfrog-snapshots</id>
+            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>release</id>-->
+<!--            <build>-->
+<!--                <plugins>-->
+<!--                    &lt;!&ndash; Creates source jar &ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <artifactId>maven-source-plugin</artifactId>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>attach-sources</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>jar</goal>-->
+<!--                                </goals>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                    &lt;!&ndash; Creates javadoc jar &ndash;&gt;-->
+<!--                    <plugin>-->
+<!--                        <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                        <configuration>-->
+<!--                            <failOnError>false</failOnError>-->
+<!--                        </configuration>-->
+<!--                        <executions>-->
+<!--                            <execution>-->
+<!--                                <id>attach-javadocs</id>-->
+<!--                                <goals>-->
+<!--                                    <goal>jar</goal>-->
+<!--                                </goals>-->
+<!--                                <phase>package</phase>-->
+<!--                            </execution>-->
+<!--                        </executions>-->
+<!--                    </plugin>-->
+<!--                </plugins>-->
+<!--            </build>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 
 <!--    <build>-->
 
