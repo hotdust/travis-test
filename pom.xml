@@ -78,15 +78,15 @@
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>io.zipkin.centralsync-maven-plugin</groupId>-->
-<!--                <artifactId>centralsync-maven-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <subject>opentracing</subject>-->
-<!--                    <repo>maven</repo>-->
-<!--                    <packageName>XXX</packageName> &lt;!&ndash; XXX - maven package name in Bintray &ndash;&gt;-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <plugin>
+                <groupId>io.zipkin.centralsync-maven-plugin</groupId>
+                <artifactId>centralsync-maven-plugin</artifactId>
+                <configuration>
+                    <subject>opentracing</subject>
+                    <repo>maven</repo>
+                    <packageName>XXX</packageName> <!-- XXX - maven package name in Bintray -->
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
