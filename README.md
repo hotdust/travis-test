@@ -5,3 +5,6 @@
 
 test travis usage
 
+
+
+1，可以上传到 OJO 后，为什么不上传到 Bintray 了？
