@@ -4,14 +4,14 @@
 
     <groupId>com.myslef</groupId>
     <artifactId>test</artifactId>
-    <version>1.6.8</version>
+    <version>1.6.9-SNAPSHOT</version>
 
 
     <scm>
         <url>https://github.com/hotdust/travis-test</url>
         <connection>scm:git:https://github.com/hotdust/travis-test.git</connection>
         <developerConnection>scm:git:https://github.com/hotdust/travis-test.git</developerConnection>
-        <tag>1.6.8</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
