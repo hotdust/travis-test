@@ -4,7 +4,7 @@
 
     <groupId>com.github.hotdust</groupId>
     <artifactId>test</artifactId>
-    <version>1.6.9-SNAPSHOT</version>
+    <version>1.6.9</version>
 
 
     <scm>
@@ -95,10 +95,10 @@
             <id>bintray</id>
             <url>https://api.bintray.com/maven/hotdust/maven/travis-test/;publish=1</url>
         </repository>
-        <snapshotRepository>
-            <id>jfrog-snapshots</id>
-            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>
-        </snapshotRepository>
+<!--        <snapshotRepository>-->
+<!--            <id>jfrog-snapshots</id>-->
+<!--            <url>http://oss.jfrog.org/artifactory/oss-snapshot-local</url>-->
+<!--        </snapshotRepository>-->
     </distributionManagement>
 
 
