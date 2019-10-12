@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.hotdust</groupId>
-    <artifactId>test</artifactId>
-    <version>1.6.9</version>
+    <artifactId>travis-test</artifactId>
+    <version>1.7.0</version>
 
 
     <scm>
