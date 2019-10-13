@@ -4,7 +4,7 @@
 
     <groupId>com.github.hotdust</groupId>
     <artifactId>travis-test</artifactId>
-    <version>1.7.8-SNAPSHOT</version>
+    <version>1.7.9-SNAPSHOT</version>
 
 
     <properties>
