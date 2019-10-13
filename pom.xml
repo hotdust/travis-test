@@ -4,7 +4,7 @@
 
     <groupId>com.github.hotdust</groupId>
     <artifactId>travis-test</artifactId>
-    <version>1.7.7-SNAPSHOT</version>
+    <version>1.7.7</version>
 
 
     <properties>
@@ -39,7 +39,7 @@
         <url>https://github.com/hotdust/travis-test</url>
         <connection>scm:git:https://github.com/hotdust/travis-test.git</connection>
         <developerConnection>scm:git:https://github.com/hotdust/travis-test.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>1.7.7</tag>
     </scm>
 
 
