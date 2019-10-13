@@ -106,7 +106,7 @@
                 <configuration>
                     <subject>opentracing</subject>
                     <repo>maven</repo>
-                    <packageName>XXX</packageName> <!-- XXX - maven package name in Bintray -->
+                    <packageName>travis-test</packageName> <!-- XXX - maven package name in Bintray -->
                 </configuration>
             </plugin>
         </plugins>
