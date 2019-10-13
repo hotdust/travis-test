@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.hotdust</groupId>
-    <artifactId>test</artifactId>
+    <artifactId>travis-test</artifactId>
     <version>1.7.4-SNAPSHOT</version>
 
 
